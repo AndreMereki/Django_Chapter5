@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Django blog</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/base.css'%}" rel="stylesheet">
+</head>
+<body>
+    <body>
+        <header>
+            <h1><a href="">Django blog</a></h1>
+        </header>
+        <hr>
+            
+    </body>
+    {% for post in object_list %}
+    <div>
+        <h2>
+            <a href="">{{ post.title }}</a>
+            <p>{{ post.body }}</p>
+        </h2>
+    </div>
+    {% endfor %}
+</body>
+</html>
